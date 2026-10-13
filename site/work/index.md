@@ -18,8 +18,3 @@ comparable measures of tracking and motion quality.
 
 Expression graphs, structural sharing, and sparse representations in optimization
 infrastructure.
-
-## Mathematical art
-
-[fftwall](https://github.com/mellowyellow71/fftwall) is my procedural wallpaper
-generator. There’s a small interactive version in the [playground](/playground/).

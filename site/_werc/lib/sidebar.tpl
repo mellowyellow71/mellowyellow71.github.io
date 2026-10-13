@@ -25,22 +25,6 @@
 % }
   </li>
   <li>
-% site_sidebar_link /fun/ 'fun/'
-% if(~ $req_path /fun/ /fun/*) {
-    <ul>
-      <li>
-% site_sidebar_link /fun/fftwall/ fftwall
-      </li>
-      <li>
-% site_sidebar_link /fun/rustcube/ rustcube
-      </li>
-      <li>
-% site_sidebar_link /fun/mechanical-keyboards/ keebs
-      </li>
-    </ul>
-% }
-  </li>
-  <li>
 % site_sidebar_link /other-interests/ 'other interests/'
   </li>
 </ul>

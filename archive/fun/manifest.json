@@ -1,0 +1,374 @@
+[
+  {
+    "original": "site/fun/fftwall/_werc/config",
+    "archive": "archive/fun/site/fun/fftwall/_werc/config",
+    "sha256": "101c45ecea6b77147673994417cee24e5837e6de6a20ecea715c9b7e4c6239c9",
+    "kind": "moved"
+  },
+  {
+    "original": "site/fun/fftwall/index.tpl",
+    "archive": "archive/fun/site/fun/fftwall/index.tpl",
+    "sha256": "4d083eb8ac0d40ad951949c6a9ac9305524e1c7bfca8594e666b67c3609e160d",
+    "kind": "moved"
+  },
+  {
+    "original": "site/fun/index.md",
+    "archive": "archive/fun/site/fun/index.md",
+    "sha256": "74740389c79e32c451cd0f8f9bda0178603409862384a335c617438c55868ee1",
+    "kind": "moved"
+  },
+  {
+    "original": "site/fun/mechanical-keyboards/index.md",
+    "archive": "archive/fun/site/fun/mechanical-keyboards/index.md",
+    "sha256": "03ad7d7a9308e8cc6de1f41731ab3cea98b2b6d820520eb53277303fa6787329",
+    "kind": "moved"
+  },
+  {
+    "original": "site/fun/rustcube/_werc/config",
+    "archive": "archive/fun/site/fun/rustcube/_werc/config",
+    "sha256": "da24f19bd85b4014ad14aee737b6acba3e051428044f5e1e5b6a0b6b0eca172c",
+    "kind": "moved"
+  },
+  {
+    "original": "site/fun/rustcube/index.tpl",
+    "archive": "archive/fun/site/fun/rustcube/index.tpl",
+    "sha256": "b8e49943ae4ce9393da2e2f680796fcc65c6dc0aa8653cbde1b9a8be35c3f24b",
+    "kind": "moved"
+  },
+  {
+    "original": "site/playground/_werc/config",
+    "archive": "archive/fun/site/playground/_werc/config",
+    "sha256": "5930c971c30f9fc89265d6031ad776e4f40951c95042efebb20725cbacf7974f",
+    "kind": "moved"
+  },
+  {
+    "original": "site/playground/index.tpl",
+    "archive": "archive/fun/site/playground/index.tpl",
+    "sha256": "94ea8b5884272c1b390374f5b6e464384a1f47835e253bc87dea5edb92af1c6a",
+    "kind": "moved"
+  },
+  {
+    "original": "site/projects/fftwall/_werc/config",
+    "archive": "archive/fun/site/projects/fftwall/_werc/config",
+    "sha256": "5930c971c30f9fc89265d6031ad776e4f40951c95042efebb20725cbacf7974f",
+    "kind": "moved"
+  },
+  {
+    "original": "site/projects/fftwall/index.tpl",
+    "archive": "archive/fun/site/projects/fftwall/index.tpl",
+    "sha256": "94ea8b5884272c1b390374f5b6e464384a1f47835e253bc87dea5edb92af1c6a",
+    "kind": "moved"
+  },
+  {
+    "original": "site/_werc/lib/art.tpl",
+    "archive": "archive/fun/site/_werc/lib/art.tpl",
+    "sha256": "2f3602decd054f031403b7b9e8bc39ff065014b88f012328e9f014a82e1b88d9",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/art/svensson-42.webp",
+    "archive": "archive/fun/site/assets/art/svensson-42.webp",
+    "sha256": "7197ea726d328680a8c91b708ea745e020dc72c4a34ae640bb5454f586471649",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/LICENSE-APACHE.txt",
+    "archive": "archive/fun/site/assets/vendor/cubing/LICENSE-APACHE.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/LICENSE-MPL.md",
+    "archive": "archive/fun/site/assets/vendor/cubing/LICENSE-MPL.md",
+    "sha256": "61571dc4c616bf39d5724198cde756eca8fd8f50629c24bdec8c34faf36314a7",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/LICENSE-random-uint-below.md",
+    "archive": "archive/fun/site/assets/vendor/cubing/LICENSE-random-uint-below.md",
+    "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/LICENSE-three.txt",
+    "archive": "archive/fun/site/assets/vendor/cubing/LICENSE-three.txt",
+    "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/PROVENANCE.txt",
+    "archive": "archive/fun/site/assets/vendor/cubing/PROVENANCE.txt",
+    "sha256": "07725c30f91a03ca43b0bdb8f8b576ce2289308c984e5dc588060f058ad27e45",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/big-puzzle-orientation-G75BXW2W-7HTRHY6H.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/big-puzzle-orientation-G75BXW2W-7HTRHY6H.js",
+    "sha256": "0488dee65775f572c61482f3fc50d28912a1bb908bdbe5025b22cef30a378ce4",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/chunk-DDQMJYUD.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/chunk-DDQMJYUD.js",
+    "sha256": "14844e0283fc682f8ff7f8e02f01c0907498d372a162a0ee757af4c6f4e22358",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/chunk-H2QAHMYH.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/chunk-H2QAHMYH.js",
+    "sha256": "124abb2172a4512b511508dce70a4f1de0351fad9e9c84ac70d7c99e58c1f1c7",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/chunk-IJETVUTO.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/chunk-IJETVUTO.js",
+    "sha256": "75725c9b4492b22bb270398a38935f4a39542a918c2245ad2e5d6dc4f601daa2",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/chunk-LVL5IW6J.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/chunk-LVL5IW6J.js",
+    "sha256": "6b9f36c702a0c8d400d41e8e72c88c335d60c66a6c71dcca31fa6ae27aa273bc",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/chunk-LVL5IW6J.js.LEGAL.txt",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/chunk-LVL5IW6J.js.LEGAL.txt",
+    "sha256": "877102fe3cc1dbb49f95233db2ea14b2edb3910081eb30847cec007ef5f2fd91",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/chunk-R5B77UIM.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/chunk-R5B77UIM.js",
+    "sha256": "69e8a15e18bfb431ccd107db9b58ab5ca1697d679f5e56a11b3bc0c6d0b31ee9",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/chunk-TORY3DKJ.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/chunk-TORY3DKJ.js",
+    "sha256": "90adc1a5148a26bcea16bafe1f4bc4c0161c0ec65a3313b31ecf379588d494c6",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/chunk-TQS7GKGT.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/chunk-TQS7GKGT.js",
+    "sha256": "b97931236ce0be3def19d61583a5e6b49ca67b3c66205db5c7eda26d24428dc5",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/chunk-VE6HZZ7T.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/chunk-VE6HZZ7T.js",
+    "sha256": "f98cc48187219168718bad5fb128fe7ab39e5288970f9618e66d6af6b286210a",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/chunk-Z3TGOICD.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/chunk-Z3TGOICD.js",
+    "sha256": "184d2d9e162b4a4617288782854aa4af0eb376ad723fe0eb168c6f1037173e48",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/chunk-ZNI2V5RM.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/chunk-ZNI2V5RM.js",
+    "sha256": "e1ebedd2179df430ee38a4714c6115ae4ffdaa363fb949117b2d2ecd0a24d59c",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/inside-IHWUJJ56-NIS3U23N.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/inside-IHWUJJ56-NIS3U23N.js",
+    "sha256": "c86b2db9075b2a786199b24f69bcacd9f93097de7279de191f0937529ff8abfa",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/puzzle-geometry-KLKZHZSN.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/puzzle-geometry-KLKZHZSN.js",
+    "sha256": "869baac8bda8209ef3cf778585c4243e8263bb6e6cf177b39302c8caba1641f8",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/puzzles-dynamic-3x3x3-FYXD7SIU-2GVT6HUM.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/puzzles-dynamic-3x3x3-FYXD7SIU-2GVT6HUM.js",
+    "sha256": "98f6e356d74a98de15e24d819100c77f1f4178700325b9011ba4f04eede51db7",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/puzzles-dynamic-4x4x4-AIGABOAR-54VUBMID.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/puzzles-dynamic-4x4x4-AIGABOAR-54VUBMID.js",
+    "sha256": "263a67a4a97b5d6ad4ef34c14b8c96078f07ca9559b63738a0f74271f9626bcd",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/puzzles-dynamic-megaminx-2LVHIDL4-25PIBCFY.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/puzzles-dynamic-megaminx-2LVHIDL4-25PIBCFY.js",
+    "sha256": "4bb255711807bf2aead22147566df113cd4e7c80d6fa7ea69bac5299544b17e0",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/puzzles-dynamic-side-events-653A7JCM-XA3R2MPD.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/puzzles-dynamic-side-events-653A7JCM-XA3R2MPD.js",
+    "sha256": "6d488f908a8c63c12ceff133734764fc352f9cc0c681a8361e1172c4c4493dba",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/puzzles-dynamic-unofficial-2CY6GVZ4-KCTCPOLK.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/puzzles-dynamic-unofficial-2CY6GVZ4-KCTCPOLK.js",
+    "sha256": "b475e216f4802cdef34792b1fdcc9ad09f8b554707114cec248ef06fe0424e25",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/search-dynamic-sgs-side-events-YSB3MWLK-TMNHBMJU.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/search-dynamic-sgs-side-events-YSB3MWLK-TMNHBMJU.js",
+    "sha256": "a50f61657a4323f5ee3eb6b5acb502e24efc4f7943fc830d207f62eb7f175da7",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/search-dynamic-sgs-unofficial-OLK64DE6-W3IIKC6G.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/search-dynamic-sgs-unofficial-OLK64DE6-W3IIKC6G.js",
+    "sha256": "76590aa81a3649c4300ff9c1321d37625abcb208c4f67113c42edccf7ff9d245",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/search-dynamic-solve-3x3x3-B2L4IN34-T4OG56ZS.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/search-dynamic-solve-3x3x3-B2L4IN34-T4OG56ZS.js",
+    "sha256": "6bd0d3276d2d8ba354e602e7f8e03943828d41c1a7bb1266fa30801d179688d5",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/search-dynamic-solve-4x4x4-2A2XBBWI-Y5TS7JUS.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/search-dynamic-solve-4x4x4-2A2XBBWI-Y5TS7JUS.js",
+    "sha256": "b1b326b4820fe5df6ee7893d23a09ff64a6c6559aa6d7aeabdab66aecb3d315c",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/search-dynamic-solve-fto-ZZKLTONP-W2QTGWPI.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/search-dynamic-solve-fto-ZZKLTONP-W2QTGWPI.js",
+    "sha256": "ce44550b2850a2ba5fc62fa40b98fc3fdc5cab1fe13e265aabee759a565c37c6",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/search-dynamic-solve-kilominx-PUF4PRHS-BLITIUTF.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/search-dynamic-solve-kilominx-PUF4PRHS-BLITIUTF.js",
+    "sha256": "c2887f4317b16cbaa082670033ca87b6d1eab8cce3dc745daf9598c5dcb9790a",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/search-dynamic-solve-master_tetraminx-GIS7T5B7-5AGX7WY6.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/search-dynamic-solve-master_tetraminx-GIS7T5B7-5AGX7WY6.js",
+    "sha256": "ddc487e256f5a69efbce08d38f3033c15b6d8b8b2bf47da7526ac6c48c9f0200",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/search-worker-entry-2OGDZSWY.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/search-worker-entry-2OGDZSWY.js",
+    "sha256": "d80abfa36a9959de681c4825f9ff97abccdb7721ba004ba8cf77171e12969a46",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/twips-LHO3IYJC-HF43SSSA.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/twips-LHO3IYJC-HF43SSSA.js",
+    "sha256": "5bd60615cf13de0e46af735c42de7b40d3969687bfb1c77d769d927522b13b9a",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/twips_wasm_bg-TJNYGA2C-AP2O4LGG-4OZ32WMC.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/twips_wasm_bg-TJNYGA2C-AP2O4LGG-4OZ32WMC.js",
+    "sha256": "615bc997ea85606b179148738e3aae5227cb59c3186db6d0787ed8ad8fc95a2b",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/chunks/twisty-dynamic-3d-A2G22YLA-NK4NP4YL.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/chunks/twisty-dynamic-3d-A2G22YLA-NK4NP4YL.js",
+    "sha256": "97f9fef94cc75698c5687d5124d591803322cceab6401702367c659ceb4dd44e",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/vendor/cubing/index.js",
+    "archive": "archive/fun/site/assets/vendor/cubing/index.js",
+    "sha256": "4386d071706404a044f15d20578d295fa45373c3744da84224010e62392438df",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/playground.js",
+    "archive": "archive/fun/site/assets/playground.js",
+    "sha256": "52be622f8fdcf16a67a48cec6218734421987729d30d525e1f7a9a30547229a8",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/rustcube.js",
+    "archive": "archive/fun/site/assets/rustcube.js",
+    "sha256": "fa2445de6f9b7e7d2100e0631f7c7b72311a82dc81d31cc1afcf6e54fe8e7077",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/art-core.js",
+    "archive": "archive/fun/site/assets/art-core.js",
+    "sha256": "97432178a7995232949ccb12bf1484fe4aa4aec28b2af45a9311b2dca6c7bfa0",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/art-worker.js",
+    "archive": "archive/fun/site/assets/art-worker.js",
+    "sha256": "72e6ee4a71c6ecdb6eaa716c4c97fd69e7b769a8a72d5a48b6d8dcd27a65cee2",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/fft.js",
+    "archive": "archive/fun/site/assets/fft.js",
+    "sha256": "6d601ae3f36f650be25f1f71c5f3a5c8807d08528a1997e1282d050b80814ba7",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/palettes.js",
+    "archive": "archive/fun/site/assets/palettes.js",
+    "sha256": "f1f8fb70dcbb255a7a0ce3a591388e765c52e4fda2ccd2332fbd1d13ada02d45",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/fftwall-LICENSE.txt",
+    "archive": "archive/fun/site/assets/fftwall-LICENSE.txt",
+    "sha256": "ecd8c8c83c6d9e1e4b5767086c870c5813c6c74be10994c3c48739e4b5355fd3",
+    "kind": "moved"
+  },
+  {
+    "original": "site/assets/fft-masthead.svg",
+    "archive": "archive/fun/site/assets/fft-masthead.svg",
+    "sha256": "1d94afcdf9e55539ba05e604d87f0dc159e266777a9e495692f5941074ce90a3",
+    "kind": "moved"
+  },
+  {
+    "original": "scripts/render_masthead.mjs",
+    "archive": "archive/fun/scripts/render_masthead.mjs",
+    "sha256": "0ba2b093a163bfa1cdfaf6d8901ae7fc76aafb04423527cbc544d13fc73f07f3",
+    "kind": "moved"
+  },
+  {
+    "original": "site/_werc/lib/sidebar.tpl",
+    "archive": "archive/fun/site/_werc/lib/sidebar.tpl",
+    "sha256": "054a0e6d645ffcffcfc28dfd461df1c5814804ed1707c33af804ceb3f2f45469",
+    "kind": "snapshot"
+  },
+  {
+    "original": "site/_werc/lib/headers.tpl",
+    "archive": "archive/fun/site/_werc/lib/headers.tpl",
+    "sha256": "22499f0c7b316e29c8c8cfba5595e4c5aa7ca91f04b263ae9f368dcdee9150ac",
+    "kind": "snapshot"
+  },
+  {
+    "original": "site/assets/site.css",
+    "archive": "archive/fun/site/assets/site.css",
+    "sha256": "3208e6b30e3f01404ad0c847bee1f7dfd6ce8cd6df9ffbb1cad167ce5deb8d95",
+    "kind": "snapshot"
+  },
+  {
+    "original": "site/about/index.md",
+    "archive": "archive/fun/site/about/index.md",
+    "sha256": "39553aeefca8e1615716168ad8417eac8e5a833f001510a5619a916b2bd4ebe2",
+    "kind": "snapshot"
+  },
+  {
+    "original": "site/work/index.md",
+    "archive": "archive/fun/site/work/index.md",
+    "sha256": "64ecc2685550a691a89de6a9df0203b3c165daa64d5164ea0d827b77addafe92",
+    "kind": "snapshot"
+  }
+]
