@@ -12,7 +12,7 @@ Push changes to `main` to deploy, or run **Deploy werc site to GitHub Pages** fr
 
 Edit content in `site/`, templates in `site/_werc/lib/`, and styles or media in `site/assets/`. `dist/` is generated output.
 
-Local setup requires Python 3, Node.js, Git, and a C compiler. No npm dependencies are required.
+Local setup requires Python 3, Node.js, Git, and a C compiler. No npm dependencies are required. The upstream template compiler uses the host’s `/usr/bin/awk` for UTF-8 compatibility on Linux.
 
 ```sh
 npm run setup

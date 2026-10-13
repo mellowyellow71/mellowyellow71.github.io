@@ -15,8 +15,11 @@ PLAN9 = Path(os.environ.get('WERC_PLAN9', os.environ.get('PLAN9', CACHE_BASE / '
 RUNTIME = CACHE_BASE / ('revant-werc-' + hashlib.sha256(str(ROOT).encode()).hexdigest()[:10])
 ENGINE = RUNTIME / 'werc'
 REQUIRED_TOOLS = ('rc', 'awk', 'cat', 'sed', 'grep', 'test', 'ls', 'basename', 'tr', 'sort', 'date')
+HOST_AWK = Path('/usr/bin/awk')
 
 def prepare():
+    if not HOST_AWK.is_file() or not os.access(HOST_AWK, os.X_OK):
+        raise RuntimeError('The template compiler requires executable system awk: ' + str(HOST_AWK))
     missing = [name for name in REQUIRED_TOOLS if not (PLAN9 / 'bin' / name).is_file()]
     if missing:
         raise RuntimeError('Plan 9 tools are missing: ' + ', '.join(missing) + '. Run npm run setup.')
@@ -33,8 +36,11 @@ def prepare():
         raise RuntimeError('The runtime site path is occupied.')
     else:
         link.symlink_to(SITE, target_is_directory=True)
+    # Pinned Plan9 awk's substr advances backwards on UTF-8 in Linux's C locale.
+    # Use system awk for werc's template compiler; the vendored CGI stays intact.
     (ENGINE / 'etc' / 'initrc.local').write_text(
         "debug=()\nformatter=(awk -f bin/contrib/md2html.awk)\n"
+        "fn template { /usr/bin/awk -f bin/template.awk $* | rc $rcargs }\n"
     )
 
 @dataclass
