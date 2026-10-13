@@ -43,8 +43,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install --yes --no-install-recommends build-essential
 
-      - name: Cache pinned Plan 9 tools
-        uses: actions/cache@v6
+      - name: Restore pinned Plan 9 tools
+        id: plan9-cache
+        uses: actions/cache/restore@v6
         with:
           path: ${{ env.WERC_PLAN9 }}
           key: plan9port-ubuntu24-${{ runner.arch }}-b6564bd96ca189c69e28797738dad56f91eb5967-${{ hashFiles('scripts/setup_werc.py') }}
@@ -52,8 +53,72 @@ jobs:
       - name: Prepare real werc runtime
         run: python3 scripts/setup_werc.py
 
+      - name: Save successfully built Plan 9 tools
+        if: steps.plan9-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v6
+        with:
+          path: ${{ env.WERC_PLAN9 }}
+          key: ${{ steps.plan9-cache.outputs.cache-primary-key }}
+
       - name: Check live werc rendering
+        id: werc-check
         run: python3 scripts/check_werc.py
+
+      - name: Diagnose failed werc rendering
+        if: failure() && steps.werc-check.outcome == 'failure'
+        run: |
+          python3 - <<'PY'
+          from collections import Counter
+          from html.parser import HTMLParser
+          import sys
+
+          sys.path.insert(0, 'scripts')
+          import werc_runtime
+
+          class Tags(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.openings, self.closings = Counter(), Counter()
+              def handle_starttag(self, tag, attributes):
+                  self.openings[tag] += 1
+              def handle_endtag(self, tag):
+                  self.closings[tag] += 1
+
+          completed = []
+          original_run = werc_runtime.subprocess.run
+          def capture_run(*args, **kwargs):
+              result = original_run(*args, **kwargs)
+              completed.append(result)
+              return result
+          werc_runtime.subprocess.run = capture_run
+
+          try:
+              werc_runtime.prepare()
+              response = werc_runtime.render('/')
+              text = response.body.decode(errors='replace')
+              parser = Tags()
+              parser.feed(text)
+              print('Root response status:', response.status)
+              print('Opening tags:', dict(parser.openings))
+              print('Closing tags:', dict(parser.closings))
+              lines = text.splitlines()
+              print('First 8 HTML lines (up to 300 characters each):')
+              for line in lines[:8]:
+                  print(line[:300])
+              print('Last 8 HTML lines (up to 300 characters each):')
+              for line in lines[-8:]:
+                  print(line[:300])
+          except Exception as error:
+              print('Root render diagnostic:', type(error).__name__, str(error))
+              stderr = getattr(error, 'stderr', None)
+              if stderr:
+                  print('Exception stderr:', stderr.decode(errors='replace')[-6000:])
+          finally:
+              for result in completed:
+                  print('rc exit code:', result.returncode)
+                  print('rc stderr (last 6000 characters):')
+                  print(result.stderr.decode(errors='replace')[-6000:] or '(empty)')
+          PY
 
       - name: Configure Pages
         id: pages
