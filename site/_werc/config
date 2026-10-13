@@ -5,7 +5,7 @@ handlers_bar_left=()
 enabled_apps=()
 
 if(~ $req_path /) {
-    pageTitle='yo gurt'
+    pageTitle='Hi, I''m Ray'
 }
 
 fn site_sidebar_link {
