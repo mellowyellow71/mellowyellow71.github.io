@@ -70,6 +70,7 @@ jobs:
           python3 - <<'PY'
           from collections import Counter
           from html.parser import HTMLParser
+          import os
           import sys
 
           sys.path.insert(0, 'scripts')
@@ -100,6 +101,8 @@ jobs:
               parser.feed(text)
               parser.close()
               print('Root response status:', response.status)
+              title_start = text.find('<title>')
+              print('Title HTML excerpt:', repr(text[title_start:title_start + 200]))
               print('Opening tags:', dict(parser.openings))
               print('Closing tags:', dict(parser.closings))
               lines = text.splitlines()
@@ -109,6 +112,20 @@ jobs:
               print('Last 8 HTML lines (up to 300 characters each):')
               for line in lines[-8:]:
                   print(line[:300])
+              compiler = original_run(
+                  [str(werc_runtime.PLAN9 / 'bin' / 'awk'), '-f',
+                   str(werc_runtime.ENGINE / 'bin' / 'template.awk'),
+                   str(werc_runtime.SITE / '_werc' / 'lib' / 'headers.tpl')],
+                  cwd=werc_runtime.ENGINE,
+                  env=dict(os.environ, PLAN9=str(werc_runtime.PLAN9)),
+                  capture_output=True, timeout=20,
+              )
+              print('Header template compiler exit code:', compiler.returncode)
+              print('Generated rc first 25 lines (up to 300 characters each):')
+              for line in compiler.stdout.decode(errors='replace').splitlines()[:25]:
+                  print(line[:300])
+              print('Header template compiler stderr (last 6000 characters):')
+              print(compiler.stderr.decode(errors='replace')[-6000:] or '(empty)')
           except Exception as error:
               print('Root render diagnostic:', type(error).__name__, str(error))
               stderr = getattr(error, 'stderr', None)
