@@ -98,12 +98,13 @@ jobs:
               text = response.body.decode(errors='replace')
               parser = Tags()
               parser.feed(text)
+              parser.close()
               print('Root response status:', response.status)
               print('Opening tags:', dict(parser.openings))
               print('Closing tags:', dict(parser.closings))
               lines = text.splitlines()
-              print('First 8 HTML lines (up to 300 characters each):')
-              for line in lines[:8]:
+              print('First 16 HTML lines (up to 300 characters each):')
+              for line in lines[:16]:
                   print(line[:300])
               print('Last 8 HTML lines (up to 300 characters each):')
               for line in lines[-8:]:

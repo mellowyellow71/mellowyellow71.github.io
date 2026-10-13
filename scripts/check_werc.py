@@ -29,6 +29,7 @@ for route in routes():
     assert b'<!doctype html>' in response.body.lower(), route
     parser = Page()
     parser.feed(response.body.decode())
+    parser.close()
     for tag in ('html', 'head', 'body'):
         assert parser.openings[tag] == parser.closings[tag] == 1, (route, tag)
     pages[route] = parser
