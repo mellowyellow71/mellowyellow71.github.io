@@ -1,0 +1,1 @@
+import{a as e}from"./chunk-ZNI2V5RM.js";e.expose&&import("./inside-IHWUJJ56-NIS3U23N.js").then(()=>{globalThis.postMessage?globalThis.postMessage("comlink-exposed"):globalThis.process.getBuiltinModule("node:worker_threads").parentPort?.postMessage("comlink-exposed")});var s=import.meta.url;export{s as WORKER_ENTRY_FILE_URL};

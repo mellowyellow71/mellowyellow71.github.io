@@ -1,0 +1,12 @@
+{
+  "name": "revant-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "python3 scripts/setup_werc.py",
+    "dev": "python3 scripts/serve_werc.py",
+    "build": "python3 scripts/export_werc.py",
+    "check": "python3 scripts/check_werc.py"
+  }
+}

@@ -1,0 +1,178 @@
+fn conf_enable_mdir {
+        mdir=`{pwd}
+        listbase=$conf_wd
+        listname=`{basename `{ basename -d $listbase}}
+        conf_enable_app mdir
+        dirfilter=$dirfilter' /mbox\/?$/d;'
+}
+
+
+fn mdir_init   {
+    showmonth=`{echo $req_path | sed 's/.*[0-9][0-9][0-9][0-9]\/([A-Z][a-z][^\/]+).*/\1/'}
+    showyear=`{echo $req_path | sed 's/.*\/([0-9][0-9][0-9][0-9])\/.*/\1/'}
+    handler_body_main='mdir_index'
+
+    if (~ $req_path $listbase[0-9][0-9][0-9][0-9]/[A-Z][a-z]*/[0-9]*) {
+        handler_body_main='message_display'
+    } 
+		if not if (~ $req_path $listbase[0-9][0-9][0-9][0-9]/[A-Z][a-z]*) {
+        handler_body_main='month_display'
+    } 
+		if not if(~ $req_path $listbase[0-9][0-9][0-9][0-9]*) {
+        handler_body_main='year_display'
+    }
+
+
+}
+
+fn message_display {
+  message=`{basename $req_path}
+  echo '<h1><a href="'$listbase'">'$listname'</a> - <a href="'$listbase$showyear'/">'$showyear'</a> - '
+  echo '<a href="'$listbase$showyear'/'$showmonth'/">'$showmonth'</a> -'
+	echo '<a href="'$req_path'">this message</a> ' 
+	approx=`{echo $"message | sed 's/(...).*/\1/' }
+	neighbors=`{ls -p $mdir/mbox/$approx^*}
+	prevmsg=`{echo $neighbors | tr '\012' ' ' | sed -n 's/.* ([^ ]+) '$message'.*/\1/p'}
+	nextmsg=`{echo $neighbors | tr '\012' ' ' | sed -n 's/.*'$message' ([^ ]+).*/\1/p'}
+	echo '</h1><h2>'
+	if (~ $#prevmsg 1 || ~ $#nextmsg 1) { echo '[<i> ' }
+  if (~ $#prevmsg 1) { echo '<a href="'$prevmsg'">previous</a>' }
+	if (~ $#prevmsg 1 && ~ $#nextmsg 1) { echo ' , ' }
+	if (~ $#nextmsg 1) { echo '<a href="'$nextmsg'">next</a>' }
+	if (~ $#prevmsg 1 || ~ $#nextmsg 1) { echo ' </i>]' }
+  echo '</h2>'
+  awk '
+  /^Subject:/ && (headersdone == 0) { subject=$0 }
+  /^From:/ && (headersdone == 0) { from=$0; gsub(/</, "\\&lt;", from); gsub(/>/, "\\&gt;", from); }
+  /^Date:/ && (headersdone == 0) { date=$0 }
+  /^$/ && (headersdone==0) { print "<h2>" subject "</h2><pre>"; print from; print date; headersdone=1 }
+  (headersdone == 1) { exit }
+  ' $mdir/mbox/$message | sed 's/([^ @.]+)\@[^ @]+\.[^@ $][a-zA-Z]+/\1@[REDACTED]/g;' 
+
+	cat $mdir/mbox/$message | {
+		boundary=undef;
+		while (line=`{read}) {
+			if (~ $line Content-Type*multipart*) { # flag mimeshit boundary
+										multipart=1
+				boundary=`{echo $line | sed 's/^.*boundary=//; s/[  ].*$//'}
+										if (test -z $boundary) { boundary=undef; } # fucking header wrap
+			}
+						if (~ $multipart 1) {
+										if (~ $boundary undef) { # desperately try to identify a boundary
+					boundary=`{echo $line | sed 's/^.*boundary=//; s/[        ].*$//'}
+			 }
+			}
+
+			if (~ $"line '') { # note end of header section
+				endheaders = 1;
+			}
+
+			if (~ $boundary undef ) { # no boundary, headers over:  print message
+				if (~ $endheaders 1) {
+					echo $line
+				}
+			}
+			if not { # boundaries: print only text/plain
+				if (~ $line --$boundary) { # boundary found, toggle state
+					if (~ $inboundary 1) { 
+						inboundary=0
+					}
+					if not {
+						inboundary=1
+					}
+				}
+				if (~ $inboundary 1) { # we're in a text/plain part, print it
+					if (~ $textpart 1) {
+						echo $line
+					}
+				}
+				if (~ $line Content-Type*text*plain*) { # note advent of text/plain part
+					if (~ $inboundary 1) {
+						echo found text part
+						textpart=1
+					}
+				}
+			}
+		}
+	}
+
+  echo '</pre>'
+}
+
+fn mdir_index {
+  echo '<h1>' $listname '</h1>'
+  echo '<ul>'
+  ls -p $mdir/mbox | awk ' { year = int($0 / 31556926); array[year+1970]+=1; } 
+  END { for (i in array) { print "<li><a href=\"" i "/\">" i "</a> (" array[i] " messages)</li>" | "sort"}  }' 
+  echo '</ul>'
+}
+
+fn year_display {
+echo '<h1><a href="'$listbase'">'$listname'</a> - '$showyear'</h1>'
+echo '<ul>'
+ls -p $mdir/mbox | awk 'BEGIN { jan = (ENVIRON["showyear"] - 1970) * 31556926
+	feb = jan + 2629743; mar = feb + 2629743; apr = mar + 2629743; may = apr + 2629743;
+	jun = may + 2629743; jul = jun + 2629743; aug = jul + 2629743; sep = aug + 2629743;
+	oct = sep + 2629743; nov = oct + 2629743; dec = nov + 2629743; end = dec + 2629743 }
+	($0 > jan) && ($0 < feb) { month["January"] += 1 }
+	($0 > feb) && ($0 < mar) { month["February"] += 1 }
+	($0 > mar) && ($0 < apr) { month["March"] += 1 }
+	($0 > apr) && ($0 < may) { month["April"] += 1 }
+	($0 > may) && ($0 < jun) { month["May"] += 1 }
+	($0 > jun) && ($0 < jul) { month["June"] += 1 }
+	($0 > jul) && ($0 < aug) { month["July"] += 1 }
+	($0 > aug) && ($0 < sep) { month["August"] += 1 }
+	($0 > sep) && ($0 < oct) { month["September"] += 1 }
+	($0 > oct) && ($0 < nov) { month["October"] += 1 }
+	($0 > nov) && ($0 < dec) { month["November"] += 1 }
+	($0 > dec) && ($0 < end) { month["December"] += 1 }
+	END { for (i in month) { 
+		print i "<li><a href=\"" ENVIRON["listbase"] ENVIRON["showyear"] "/" i "/\">" i "</a> (" month[i] " messages) </li>" 
+	} }
+	'| sort -M | sed 's/^[A-Za-z]+<li>/<li>/'
+
+echo '</ul>'
+}
+
+fn month_display {
+echo '<h1><a href="'$listbase'">'$listname'</a> - <a href="'$listbase$showyear'/"/>'$showyear'</a> - '$showmonth'</h1>'
+echo '<ul>'
+ls -p $mdir/mbox | awk 'BEGIN { monthstamp = (ENVIRON["showyear"] - 1970) * 31556926
+	month = ENVIRON["showmonth"]
+	year = ENVIRON["showyear"]
+	listbase = ENVIRON["listbase"]
+	msg = ENVIRON["msg"]
+	if (month == "February") { monthstamp += 2629743 }
+	if (month == "March")    { monthstamp += (2629743 * 2) }
+	if (month == "April")    { monthstamp += (2629743 * 3) }
+	if (month == "May")      { monthstamp += (2629743 * 4) }
+	if (month == "June")     { monthstamp += (2629743 * 5) }
+	if (month == "July")     { monthstamp += (2629743 * 6) }
+	if (month == "August")   { monthstamp += (2629743 * 7) }
+	if (month == "September"){ monthstamp += (2629743 * 8) }
+	if (month == "October")  { monthstamp += (2629743 * 9) }
+	if (month == "November") { monthstamp += (2629743 * 10) }
+	if (month == "December") { monthstamp += (2629743 * 11) }
+	monthend = monthstamp + 2629743
+	}
+	($0 > monthstamp) && ($0 < monthend) { print $0 }
+	' | sort -u | while (msg=`{read}) {
+		awk 'BEGIN { month = ENVIRON["showmonth"]; year = ENVIRON["showyear"]; 
+								 listbase = ENVIRON["listbase"]; msg = ENVIRON["msg"] }
+				 /^Subject:[ 	]/ { subject = $0; sub(/^Subject: /, "", subject) }
+				 /^From:[ 	]/ { gsub(/^From:[ 	]+/, "", $0);
+								 		 gsub(/ <.*$/, "", $0); 
+										 gsub(/[<>]/, "", $0);
+										 gsub(/^.*[(]/, "", $0); 
+										 gsub(/[)].*$/, "", $0); 
+										 gsub(/["]/, "", $0);
+										 gsub(/@[^ ]+/, "", $0); 
+										 from=$0; }
+				/^$/ { nextfile; }
+				END { if (subject == "") { subject = "[no subject]" }
+							print "<li><a href=\"" listbase year "/" month "/" msg "\">";
+							print subject "</a> - " from "</li>" }' $mdir/mbox/$msg
+ }
+
+echo '</ul>'
+}

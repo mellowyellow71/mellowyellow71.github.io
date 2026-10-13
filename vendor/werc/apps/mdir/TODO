@@ -1,0 +1,10 @@
+* unfuck quoted-printable crap
+* more robust plaintext extraction from mime
+* more efficient month sort in the year view
+  * I think sort(1) might have a bug with -M and pos1
+  * or stupid awk can just produce an ordered list
+* a lot of speedup
+  * this might mean an external index
+  * or it might just mean aggressive in-app cache
+* do we want threading in the month views
+* decode non-ascii header values (From: especially)

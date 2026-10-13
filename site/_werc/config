@@ -1,0 +1,20 @@
+siteTitle='Revant Kasichainula'
+siteSubTitle='Controls, optimization, robotics'
+meta_description='Revant Kasichainula: work in controls, numerical optimization, and robotics.'
+handlers_bar_left=()
+enabled_apps=()
+
+if(~ $req_path /) {
+    pageTitle='yo gurt'
+}
+
+fn site_sidebar_link {
+    active=''
+    if(~ $req_path $1) {
+        active=' aria-current="page"'
+    }
+    if not if(! ~ $1 / && ~ $req_path $1^*) {
+        active=' aria-current="location"'
+    }
+    echo '<a href="'$1'"'$active'>'$2'</a>'
+}

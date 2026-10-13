@@ -1,0 +1,260 @@
+{
+  "capture_source": {
+    "native_frame_dimensions": [
+      1280,
+      720
+    ],
+    "type": "native browser screenshots of the local aircraft viewer",
+    "camera": "fixed during each capture",
+    "original_data_modified": false,
+    "model_card_source": "ROM_MPC/_F16/_UCAB/delta.fem",
+    "model_card_origin": "generated (untracked); upstream F-16 model absent"
+  },
+  "processing": {
+    "video_codec": "H.264",
+    "pixel_format": "yuv420p",
+    "quality_crf": 20,
+    "faststart": true,
+    "audio": false,
+    "resize_filter": "Lanczos",
+    "mode_labels": "small native text overlays; original geometry and colors otherwise preserved"
+  },
+  "mode_visualization": {
+    "natural_frequencies_hz": {
+      "flex_mode_1": 37.8,
+      "flex_mode_2": 49.9
+    },
+    "display_frequency_hz": 0.4,
+    "displacement_amplified": true,
+    "note": "Mode shapes are amplified and slowed for visibility; not real-time physical oscillation or closed-loop control evidence.",
+    "amplitude_control": {
+      "value": 16,
+      "unit": "in",
+      "source": "captured viewer amplitude slider"
+    }
+  },
+  "assets": {
+    "wind-tunnel.mp4": {
+      "sources": [
+        "wind/frame-0000.jpg \u2026 frame-0119.jpg"
+      ],
+      "source_frame_count": 120,
+      "fps": 15,
+      "duration_seconds": 8,
+      "crop_xywh": [
+        304,
+        190,
+        672,
+        448
+      ],
+      "dimensions": [
+        768,
+        512
+      ],
+      "bytes": 999421,
+      "sha256": "a8de5a95ecb71dbe48d970e57d3d64c2a6eb29a1f3a11ec6318e317514a9e207"
+    },
+    "wind-tunnel.jpg": {
+      "source": "wind/frame-0060.jpg",
+      "dimensions": [
+        768,
+        512
+      ],
+      "bytes": 38511,
+      "sha256": "d9d77eb18bb5f2ea39e5591221fe0b3bdbc0e9d8ade9e818ece5f78952f7b4e0"
+    },
+    "structure.webp": {
+      "source": "structure-sets.jpg",
+      "crop_xywh": [
+        328,
+        180,
+        640,
+        400
+      ],
+      "dimensions": [
+        800,
+        500
+      ],
+      "format": "lossless WebP after resize",
+      "bytes": 53144,
+      "sha256": "bb30bc23159998ad29a6ba78e522169837a7967bdd80f6276cd85306066145e5"
+    },
+    "structural-modes.mp4": {
+      "dimensions": [
+        800,
+        500
+      ],
+      "fps": 20,
+      "duration_seconds": 15,
+      "crop_xywh": [
+        328,
+        180,
+        640,
+        400
+      ],
+      "segments": [
+        {
+          "frames": "mode-1/frame-0000.jpg \u2026 frame-0099.jpg",
+          "start_seconds": 0,
+          "duration_seconds": 5,
+          "label": "flex mode 1 \u00b7 37.8 Hz"
+        },
+        {
+          "frames": "mode-2/frame-0000.jpg \u2026 frame-0099.jpg",
+          "start_seconds": 5,
+          "duration_seconds": 5,
+          "label": "flex mode 2 \u00b7 49.9 Hz"
+        },
+        {
+          "frames": "elevon/frame-0000.jpg \u2026 frame-0099.jpg",
+          "start_seconds": 10,
+          "duration_seconds": 5,
+          "label": "right elevon"
+        }
+      ],
+      "bytes": 314642,
+      "sha256": "e3688442899a92002de54423424e45591b1a95210ad7a6c403e02fcf7647a0c1"
+    },
+    "structural-modes.jpg": {
+      "source": "mode-1/frame-0012.jpg",
+      "label": "flex mode 1 \u00b7 37.8 Hz",
+      "dimensions": [
+        800,
+        500
+      ],
+      "bytes": 21503,
+      "sha256": "39eb0b05ce165422a2535bafaa6e3d257387614015c96d60de6a2fd379672561"
+    },
+    "banked-turn.mp4": {
+      "sources": [
+        "turn/frame-0000.jpg \u2026 frame-0079.jpg"
+      ],
+      "source_frame_count": 80,
+      "fps": 20,
+      "duration_seconds": 4,
+      "crop_xywh": [
+        328,
+        140,
+        640,
+        440
+      ],
+      "dimensions": [
+        800,
+        550
+      ],
+      "bytes": 82793,
+      "sha256": "bb31603c77824ee7bf46f13f81ee7b16dd47a734afae605f5f369a9fbb259ec3"
+    },
+    "banked-turn.jpg": {
+      "source": "turn/frame-0012.jpg",
+      "dimensions": [
+        800,
+        550
+      ],
+      "bytes": 12510,
+      "sha256": "775554240a45f8164d5e6f8793f3d379862243e3c123ac3337d8c1e3d1505788"
+    }
+  },
+  "capture_quality_checks": {
+    "wind": {
+      "frame_count": 120,
+      "unique_cropped_images": 120,
+      "colored_aircraft_envelope_crop_pixels": [
+        186,
+        98,
+        558,
+        228
+      ],
+      "near_crop_edge_flags": [],
+      "first_capture_seconds": 0.046,
+      "last_capture_seconds": 7.961,
+      "median_interval_seconds": 0.06599999999999984,
+      "crop_xywh": [
+        304,
+        190,
+        672,
+        448
+      ]
+    },
+    "mode-1": {
+      "frame_count": 100,
+      "unique_cropped_images": 95,
+      "colored_aircraft_envelope_crop_pixels": [
+        38,
+        46,
+        620,
+        312
+      ],
+      "near_crop_edge_flags": [],
+      "first_capture_seconds": 0.053,
+      "last_capture_seconds": 5.002,
+      "median_interval_seconds": 0.04300000000000015,
+      "crop_xywh": [
+        328,
+        180,
+        640,
+        400
+      ]
+    },
+    "mode-2": {
+      "frame_count": 100,
+      "unique_cropped_images": 93,
+      "colored_aircraft_envelope_crop_pixels": [
+        43,
+        46,
+        620,
+        297
+      ],
+      "near_crop_edge_flags": [],
+      "first_capture_seconds": 0.041,
+      "last_capture_seconds": 4.999,
+      "median_interval_seconds": 0.04300000000000015,
+      "crop_xywh": [
+        328,
+        180,
+        640,
+        400
+      ]
+    },
+    "elevon": {
+      "frame_count": 100,
+      "unique_cropped_images": 86,
+      "colored_aircraft_envelope_crop_pixels": [
+        40,
+        78,
+        610,
+        299
+      ],
+      "near_crop_edge_flags": [],
+      "first_capture_seconds": 0.039,
+      "last_capture_seconds": 4.988,
+      "median_interval_seconds": 0.04300000000000015,
+      "crop_xywh": [
+        328,
+        180,
+        640,
+        400
+      ]
+    },
+    "turn": {
+      "frame_count": 80,
+      "unique_cropped_images": 49,
+      "colored_aircraft_envelope_crop_pixels": [
+        163,
+        26,
+        448,
+        351
+      ],
+      "near_crop_edge_flags": [],
+      "first_capture_seconds": 0.039,
+      "last_capture_seconds": 3.998,
+      "median_interval_seconds": 0.04600000000000004,
+      "crop_xywh": [
+        328,
+        140,
+        640,
+        440
+      ]
+    }
+  }
+}

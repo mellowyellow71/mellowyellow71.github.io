@@ -1,0 +1,94 @@
+name: Deploy werc site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      pages: read
+    env:
+      WERC_PLAN9: ${{ github.workspace }}/.cache/plan9port
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Install C compiler and build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends build-essential
+
+      - name: Cache pinned Plan 9 tools
+        uses: actions/cache@v6
+        with:
+          path: ${{ env.WERC_PLAN9 }}
+          key: plan9port-ubuntu24-${{ runner.arch }}-b6564bd96ca189c69e28797738dad56f91eb5967-${{ hashFiles('scripts/setup_werc.py') }}
+
+      - name: Prepare real werc runtime
+        run: python3 scripts/setup_werc.py
+
+      - name: Check live werc rendering
+        run: python3 scripts/check_werc.py
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v6
+
+      - name: Export werc pages for the deployment path
+        env:
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: python3 scripts/export_werc.py --base-path "$PAGES_BASE_PATH"
+
+      - name: Check exported links, assets, and redirects
+        env:
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: python3 scripts/check_export.py --base-path "$PAGES_BASE_PATH"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          name: github-pages
+          path: dist
+          include-hidden-files: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
+        with:
+          artifact_name: github-pages

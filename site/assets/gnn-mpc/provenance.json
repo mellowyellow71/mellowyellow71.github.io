@@ -1,0 +1,63 @@
+{
+  "truth-vs-surrogate.mp4": {
+    "source": "runs_backup/demo_cycle.gif",
+    "dimensions": [
+      764,
+      208
+    ],
+    "source_dimensions": [
+      763,
+      208
+    ],
+    "source_frames": 61,
+    "duration_seconds": 7.32,
+    "fps": "25/3",
+    "caption": "CFD truth and surrogate rollout \u2014 forced limit cycle.",
+    "bytes": 240536,
+    "source_sha256": "2c49a7e93455be117efa9a843767fbcd1e5561be08e4651476b646070bc63d72"
+  },
+  "truth-vs-surrogate.jpg": {
+    "source": "runs_backup/demo_cycle.gif",
+    "source_frame": 30,
+    "dimensions": [
+      764,
+      208
+    ],
+    "bytes": 29876,
+    "source_sha256": "2c49a7e93455be117efa9a843767fbcd1e5561be08e4651476b646070bc63d72"
+  },
+  "cylinder-wake.mp4": {
+    "source": "output_data/cylinder_re100_wake.gif",
+    "dimensions": [
+      640,
+      248
+    ],
+    "source_frames": 201,
+    "duration_seconds": 12.06,
+    "fps": "50/3",
+    "caption": "Cylinder wake at Re=100, with zero control.",
+    "bytes": 531241,
+    "source_sha256": "7515d1048ef4bb41284608e72a18b932ad8351227fb12530395c54f2b90951a4"
+  },
+  "cylinder-wake.jpg": {
+    "source": "output_data/cylinder_re100_wake.gif",
+    "source_frame": 100,
+    "dimensions": [
+      640,
+      248
+    ],
+    "bytes": 25762,
+    "source_sha256": "7515d1048ef4bb41284608e72a18b932ad8351227fb12530395c54f2b90951a4"
+  },
+  "speed-evidence.webp": {
+    "source": "controls/c3/speed_evidence.png",
+    "dimensions": [
+      2754,
+      1210
+    ],
+    "lossless": true,
+    "caption": "Planning and inference timings from archived experiments.",
+    "bytes": 152650,
+    "source_sha256": "e96d9f22d5cd19d0914576e47a65358a7a55bf847cc7e1060b199e67fd758198"
+  }
+}

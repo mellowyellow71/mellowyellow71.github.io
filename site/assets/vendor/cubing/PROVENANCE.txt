@@ -1,0 +1,12 @@
+Self-hosted cubing.js library bundle
+
+Versions: {"cubing": "0.65.1", "esbuild": "0.28.2", "random-uint-below": "3.3.0", "three": "0.170.0"}
+
+Library source: https://github.com/cubing/cubing.js/tree/c2d0a2fcdd9f0ed63ef8cdfc6ac30b497b727459
+Published source package: https://registry.npmjs.org/cubing/-/cubing-0.65.1.tgz
+Cubing.js is used under MPL-2.0, one of its dual-license options. Original library source is unmodified; this distribution is bundled and minified with esbuild.
+Other bundled packages: Three.js (MIT), random-uint-below (Unlicense/public domain). Preserve associated LICENSE files and generated .LEGAL.txt notices.
+
+Build settings: bundle=true, splitting=true, format=esm, platform=browser, target=es2022, minify=true, legalComments=linked.
+Entry exports randomScrambleForEvent, puzzles, and ExperimentalSVGAnimator. Direct SVG drawing replaces the deferred TwistyPlayer custom element. Worker startup prioritizes the documented esbuild compatibility path, via setSearchDebug.
+Copy this whole directory with its relative chunks layout intact. No external runtime package imports.
