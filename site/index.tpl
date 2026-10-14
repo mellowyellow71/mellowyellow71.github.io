@@ -2,6 +2,7 @@
   <div id="about-me" class="home-copy">
     <h1>Hi, I'm Ray</h1>
     <p>I'm interested in optimization, robotics, and controls. I'm very curious about understanding and improving the tradeoff between performance and safety for embodied systems.</p>
+    <p>Currently a 3rd year at Stanford studying Mathematics.</p>
     <p>
       <strong id="coursework-heading"><u>Relevant coursework:</u></strong><br>
       Convex Optimization (EE 364A &amp; 364B)<br>
