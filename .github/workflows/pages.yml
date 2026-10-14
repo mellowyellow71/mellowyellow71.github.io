@@ -48,7 +48,7 @@ jobs:
         uses: actions/cache/restore@v6
         with:
           path: ${{ env.WERC_PLAN9 }}
-          key: plan9port-ubuntu24-${{ runner.arch }}-b6564bd96ca189c69e28797738dad56f91eb5967-${{ hashFiles('scripts/setup_werc.py') }}
+          key: plan9port-ubuntu24-${{ runner.arch }}-${{ github.repository }}-b6564bd96ca189c69e28797738dad56f91eb5967-${{ hashFiles('scripts/setup_werc.py') }}
 
       - name: Prepare real werc runtime
         run: python3 scripts/setup_werc.py

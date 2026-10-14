@@ -1,8 +1,8 @@
-# rayk65537
+# mellowyellow71.github.io
 
 Revant Kasichainula’s personal website, authored with [werc](https://werc.cat-v.org/) and exported as static HTML.
 
-Website: [mellowyellow71.github.io/rayk65537](https://mellowyellow71.github.io/rayk65537/).
+Website: [mellowyellow71.github.io](https://mellowyellow71.github.io/).
 
 ## Deployment
 
@@ -19,12 +19,12 @@ npm run setup
 npm run dev
 ```
 
-The preview runs at `http://127.0.0.1:4173/` using live werc CGI. To validate the project-path export:
+The preview runs at `http://127.0.0.1:4173/` using live werc CGI. To validate the root-site export:
 
 ```sh
 python3 scripts/check_werc.py
-python3 scripts/export_werc.py --base-path /rayk65537
-python3 scripts/check_export.py --base-path /rayk65537
+python3 scripts/export_werc.py --base-path /
+python3 scripts/check_export.py --base-path /
 ```
 
 The export preserves directory routes and compatibility redirects. Its base path is applied to local links and asset URLs; external links remain unchanged.
