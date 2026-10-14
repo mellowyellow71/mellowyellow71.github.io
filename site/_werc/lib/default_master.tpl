@@ -19,16 +19,7 @@
 </aside>
 <main id="content">
 % run_handlers $handlers_body_head
-% if(~ $req_path /) {
-  <div class="home-intro">
-  <div id="about-me" class="home-copy">
-% }
 % run_handler $handler_body_main
-% if(~ $req_path /) {
-  </div>
-  <img class="home-portrait" src="/assets/ray.jpg" width="1200" height="1600" alt="Ray" decoding="async">
-  </div>
-% }
 % run_handlers $handlers_body_foot
 </main>
 </div>
