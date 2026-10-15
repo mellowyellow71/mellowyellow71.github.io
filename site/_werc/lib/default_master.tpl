@@ -1,12 +1,9 @@
 <header class="site-header">
   <div class="header-links" aria-label="Contact and social links">
     <a href="mailto:revant@stanford.edu">revant@stanford.edu</a>
-    <span aria-hidden="true">|</span>
-    <a href="https://github.com/mellowyellow71">github</a>
-    <span aria-hidden="true">|</span>
-    <a href="https://www.linkedin.com/in/revant-kasichainula">linkedin</a>
-    <span aria-hidden="true">|</span>
-    <a href="https://x.com/rayk65537">x/twt</a>
+    <span class="header-link"><span aria-hidden="true">|</span><a href="https://github.com/mellowyellow71">github</a></span>
+    <span class="header-link"><span aria-hidden="true">|</span><a href="https://www.linkedin.com/in/revant-kasichainula">linkedin</a></span>
+    <span class="header-link"><span aria-hidden="true">|</span><a href="https://x.com/rayk65537">x/twt</a></span>
   </div>
   <img class="masthead-art" src="/assets/lake-banner.jpg" width="2172" height="724" alt="">
   <a class="site-name" href="/">Revant Kasichainula</a>
