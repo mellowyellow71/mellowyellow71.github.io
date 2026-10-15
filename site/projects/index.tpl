@@ -12,7 +12,7 @@
 <h2 id="core-mpc">CoRE-MPC</h2>
 <img class="project-hero" src="/assets/core-mpc-hero.png" width="1713" height="667" alt="Nominal reduced-order MPC and CoRE-MPC compared for a soft robot near a wall">
 <p>Coupled Reduction Error Model Predictive Control</p>
-<p>Previously worked on CoRE-MPC, which makes fast control of high-dimensional nonlinear systems practical without evaluating the full dynamics online. It propagates two coupled error bounds to guarantee full-system constraint satisfaction under the method’s stated assumptions. Submitted to ICRA2027.</p>
+<p>Previously worked on CoRE-MPC, which makes fast control of high-dimensional nonlinear systems practical without evaluating the full dynamics online. It propagates two coupled error bounds to guarantee full-system constraint satisfaction under the method’s stated assumptions. Submitted to ICRA2027. What you are seeing above is a high-dimensional soft robot (diamond bot) that is controlled by cable wires. <a href="https://arxiv.org/abs/2610.19250">arXiv</a></p>
 
 <h2 id="robust-mpc">RobustMPC</h2>
 <div class="project-gallery">
