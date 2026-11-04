@@ -10,7 +10,11 @@
 <p>I’m currently building a fast trajectory-optimization IK solver that turns human motion capture into humanoid robot motions the robot can actually execute. It optimizes the whole clip at once while respecting joint limits, speed limits, self-collision constraints, and foot contact. It beats the Levenberg-Marquardt pipelines people use today on their own objective while running 20 to 40 times faster. Its output is the target trajectory for humanoid RL controllers.</p>
 
 <h2 id="core-mpc">CoRE-MPC</h2>
-<img class="project-hero" src="/assets/core-mpc-hero.png" width="1713" height="667" alt="Nominal reduced-order MPC and CoRE-MPC compared for a soft robot near a wall">
+<!-- Animation by Luis Pabon: https://luispabon.info/images/hero/core-mpc.mp4 -->
+<video class="project-hero" width="1600" height="800" autoplay loop muted playsinline preload="metadata" poster="/assets/core-mpc-demo.jpg" aria-label="Animated comparison of nominal reduced-order MPC and CoRE-MPC controlling a soft robot near a wall">
+  <source src="/assets/core-mpc-demo.mp4" type="video/mp4">
+  <a href="/assets/core-mpc-demo.mp4">Watch the CoRE-MPC comparison</a>.
+</video>
 <p>Coupled Reduction Error Model Predictive Control</p>
 <p>Previously worked on CoRE-MPC, which makes fast control of high-dimensional nonlinear systems practical without evaluating the full dynamics online. It propagates two coupled error bounds to guarantee full-system constraint satisfaction under the method’s stated assumptions. Submitted to ICRA2027. What you are seeing above is a high-dimensional soft robot (diamond bot) that is controlled by cable wires. <a href="https://arxiv.org/abs/2610.19250">arXiv</a></p>
 
