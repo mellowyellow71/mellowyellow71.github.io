@@ -23,6 +23,6 @@
 </main>
 </div>
 <footer class="site-footer">
-  <span><a href="https://github.com/mellowyellow71">github</a> · <a href="https://werc.cat-v.org/">powered by werc</a> · inspired by <a href="https://overthefraildream.net/">overthefraildream.net</a></span>
+  <span><a href="https://github.com/mellowyellow71">github</a> · <a href="https://werc.cat-v.org/">powered by werc</a> · layout borrowed from <a href="https://overthefraildream.net/">overthefraildream.net</a></span>
 </footer>
 </div>
