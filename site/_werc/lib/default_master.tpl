@@ -5,9 +5,7 @@
     <span class="header-link"><span aria-hidden="true">|</span><a href="https://www.linkedin.com/in/revant-kasichainula">linkedin</a></span>
     <span class="header-link"><span aria-hidden="true">|</span><a href="https://x.com/rayk65537">x/twt</a></span>
   </div>
-  <div class="masthead-photo">
-    <img src="/assets/alpine-puppies.png" width="1152" height="384" alt="Two puppies nestled together in front of snowy mountains">
-  </div>
+  <img class="masthead-art" src="/assets/alpine-puppies-ink.png" width="1152" height="384" alt="Two puppies nestled together in front of snowy mountains">
   <a class="site-name" href="/">Revant Kasichainula</a>
 </header>
 <div class="site-body">
