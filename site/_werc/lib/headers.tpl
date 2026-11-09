@@ -7,7 +7,7 @@
   <meta name="description" content="Revant Kasichainula: controls, optimization, and robotics.">
   <title>%($pageTitle%) · Revant Kasichainula</title>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/site.css?v=alpine-blue">
 % if(! ~ $#canonical_path 0) {
   <link rel="canonical" href="%($canonical_path%)">
   <meta http-equiv="refresh" content="0;url=%($canonical_path%)">
