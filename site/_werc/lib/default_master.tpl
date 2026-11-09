@@ -5,7 +5,7 @@
     <span class="header-link"><span aria-hidden="true">|</span><a href="https://www.linkedin.com/in/revant-kasichainula">linkedin</a></span>
     <span class="header-link"><span aria-hidden="true">|</span><a href="https://x.com/rayk65537">x/twt</a></span>
   </div>
-  <img class="masthead-art" src="/assets/lake-banner.jpg" width="2172" height="724" alt="">
+  <img class="masthead-art" src="/assets/ascii-landscape.svg" width="1600" height="160" alt="">
   <a class="site-name" href="/">Revant Kasichainula</a>
 </header>
 <div class="site-body">
@@ -21,6 +21,6 @@
 </main>
 </div>
 <footer class="site-footer">
-  <span><a href="https://github.com/mellowyellow71">GitHub</a> · <a href="https://werc.cat-v.org/">powered by werc</a></span>
+  <span><a href="https://github.com/mellowyellow71">github</a> · <a href="https://werc.cat-v.org/">powered by werc</a> · inspired by <a href="https://overthefraildream.net/">overthefraildream.net</a></span>
 </footer>
 </div>

@@ -11,4 +11,4 @@ planning, or numerical optimization.
 
 ## Contact
 
-You can find me on [GitHub](https://github.com/mellowyellow71).
+You can find me on [github](https://github.com/mellowyellow71).
