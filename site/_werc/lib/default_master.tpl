@@ -1,13 +1,13 @@
 <header class="site-header">
   <div class="header-links" aria-label="Contact and social links">
-    <a href="mailto:revant@stanford.edu">revant@stanford.edu</a>
+    <a class="site-name" href="/">Revant Kasichainula</a>
+    <span class="header-link"><span aria-hidden="true">|</span><a href="mailto:revant@stanford.edu">revant@stanford.edu</a></span>
     <span class="header-link"><span aria-hidden="true">|</span><a href="https://github.com/mellowyellow71">github</a></span>
     <span class="header-link"><span aria-hidden="true">|</span><a href="https://www.linkedin.com/in/revant-kasichainula">linkedin</a></span>
     <span class="header-link"><span aria-hidden="true">|</span><a href="https://x.com/rayk65537">x/twt</a></span>
   </div>
-  <a class="masthead" href="/">
+  <a class="masthead" href="/" aria-label="Home">
     <img class="masthead-art" src="/assets/alpine-puppies-blue.png" width="600" height="179" alt="">
-    <span class="site-name">Revant Kasichainula</span>
   </a>
 </header>
 <div class="site-body">
